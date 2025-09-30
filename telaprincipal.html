@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style2.css">
+</head>
+<body>
+    <header class="header">
+        <div class="logo"> PoupaMais</div>
+            <nav class="navbar">
+            <ul>
+                <li><a href="#" class="active">Dashboard</a></li>
+                <li><a href="#">Salários</a></li>
+                <li><a href="#">Configurações</a></li>
+            </ul>
+        </nav>
+        <div class="perfil-usuario">
+            <span>Usuario</span>
+            <img src="assets/imagemusuario.webp"  alt="Foto de Perfil">
+        </div>
+    </header>
+    
+    <main class="main">
+                <section class="first-sec">
+            <div class="sec total-sec">
+                <div class="sec-header">
+                    <h3>Saldo Total</h3>
+                    </div>
+                <p class="value">R$ 12.450,75</p>
+                <p class="growth positive">+1.2% neste mês</p>
+            </div>
+
+            <div class="sec revenue-sec">
+                <div class="sec-header">
+                    <h3>Receitas</h3>
+                    </div>
+                <p class="value">R$ 8.200,00</p>
+                <p class="comparison negative">-1% em relação ao mês anterior</p>
+            </div>
+
+            <div class="sec expenses-sec">
+                <div class="sec-header">
+                    <h3>Despesas</h3>
+                    </div>
+                <p class="value">R$ 3.750,25</p>
+                <p class="comparison positive">-2% em relação ao mês anterior</p>
+            </div>
+        </section>
+        <br>
+
+            <div class="main-grid">
+            
+            <div class="left-column">
+                
+                <section class="financial-summary sec">
+                    <div class="sec-header">
+                        <h2>Resumo Financeiro</h2>
+                        <div class="time-filters">
+                            <span class="active">Mês</span>
+                            <span>Trimestre</span>
+                            <span>Ano</span>
+                        </div>
+                    </div>
+                    <div id="pie-chart-container" class="chart-container">
+                        <div class="chart-placeholder">
+                            <p>Espaço reservado para o Gráfico de Pizza</p>
+                        </div>
+                    </div>
+                </section>
+            
+
+                <section class="recent-transactions sec">
+                    <div class="sec-header">
+                        <h2>Transações Recentes</h2>
+                        <a href="#">Ver todas</a>
+                    </div>
+                    
+                    <div class="transaction-list">
+                        
+                        <div class="transaction-item">
+                            <div class="detalhes">
+                                <p class="discrição">Salário</p>
+                                <p class="categoria">Conta Corrente</p>
+                            </div>
+                            <span class="valor valor-receita">+R$ 5.000,00</span>
+                        </div>
+
+                        <div class="transaction-item">
+                            <div class="detalhes">
+                                <p class="discrição">Supermercado</p>
+                                <p class="categoria">Cartão de Crédito</p>
+                            </div>
+                            <span class="valor valor-despesa">-R$ 345,75</span>
+                        </div>
+
+                        <div class="transaction-item">
+                            <div class="detalhes">
+                                <p class="descrição">Aluguel</p>
+                                <p class="categoria">Conta Corrente</p>
+                            </div>
+                            <span class="valor valor-despesa">-R$ 1.200,00</span>
+                        </div>
+                        
+                    </div>
+                </section>
+            </div>
+
+            <div class="right-column">
+                
+                <section class="orçamento-mensal sec">
+                    <h2>Orçamento Mensal</h2>
+
+                    <div class="budget-item">
+                        <p class="category">Alimentação</p>
+                        <div class="amounts">R$ 850 / R$ 1.000</div>
+                        <div class="barras-de-Progresso">
+                            <div class="progresso-bar" style="width: 85%;"></div>
+                        </div>
+                    </div>
+                    
+                    <div class="budget-item">
+                        <p class="category">Lazer</p>
+                        <div class="amounts">R$ 280 / R$ 500</div>
+                        <div class="barras-de-Progresso">
+                            <div class="progresso-bar" style="width: 56%;"></div>
+                        </div>
+                    </div>
+                </section>
+                
+                <section class="accounts sec">
+                    <h2>Contas</h2>
+                    
+                    <div class="account-item">
+                        <p class="account-name">Cartão de Crédito</p>
+                        <span class="balance">R$ 2.450,00</span>
+                    </div>
+
+                    <div class="account-item">
+                        <p class="account-name">Conta Corrente</p>
+                        <span class="balance">R$ 8.750,50</span>
+                    </div>
+                </section>
+                
+                <section class="financial-goals sec">
+                    <h2>Metas Financeiras</h2>
+                    
+                    <div class="goal-item">
+                        <p class="goal-name">Viagem para Europa</p>
+                        <div class="amounts">R$ 5.500 de R$ 25.000</div>
+                        <div class="barras-de-Progressor">
+                            <div class="progresso-bar" style="width: 22%;"></div>
+                            <span class="progresso-percentage">22%</span>
+                        </div>
+                    </div>
+                </section>
+
+            </div>
+        </div>
+    </main>
+            
+
+
+
+
+
+    </main>
+    
+    </header>
+</body>
+</html>

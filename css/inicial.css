@@ -154,6 +154,8 @@ main {
 }
 
 
+
+
 .modal-content *, 
 .modal-content *::before, 
 .modal-content *::after {
@@ -284,25 +286,22 @@ a.login:hover {
     text-decoration: underline;
 }
 
-.modal-content-cadastro {
-    background-color: #ffffff; 
+#cadastroModal .modal-content{
+ background-color: #ffffff; 
     width: 90%; 
     max-width: 600px;
+    max-height: 650px;
     padding: 40px;
     border-radius: 12px; 
     box-shadow: 0px 10px 20px rgba(0, 0, 0, .3); 
     position: relative;
-    text-align: center;
+    text-align: left;
     justify-content: center;
     align-items: center;
 }
 
-.close-button2:hover,
-.close-button2:focus {
-    color: #000;
-    text-decoration: none;
-    cursor: pointer;
-}
+
+
 
 .modal-content .radio-container {
     grid-column: 1 / span 2; 
@@ -318,6 +317,9 @@ a.login:hover {
         padding: 20px;
     }
 }
+
+
+
 
 
 @media (max-width: 768px) {

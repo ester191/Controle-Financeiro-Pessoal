@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+<body>
+
+<div id="myPlot" style="width:100%;max-width:700px"></div>
+
+<script>
+const xArray = ["Aluguel", "Mercado", "Energia", "Água", "Outros"];
+const yArray = [1200, 950, 150, 120, 500];
+
+const layout = {title:"Suas despesas"};
+
+const data = [{labels:xArray, values:yArray, type:"pie"}];
+
+Plotly.newPlot("myPlot", data, layout);
+</script>
+
+</body>
+</html>

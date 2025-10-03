@@ -69,8 +69,7 @@
                         </div>
                     </div>
                     <div id="pie-chart-container" class="chart-container">
-                        <div class="chart-placeholder">
-                            <img  alt="Gráfico Ilustrativo">
+                        <div  class="chart-container" id="pie-chart-container" style="width:100%;max-width:1400px;">
                         </div>
                     </div>
                 </section>
@@ -237,6 +236,21 @@
         <div class="copyright">© 2024 FinControl. Todos os direitos reservados.</div>
     </footer>
 
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+
+   <script>
+       const xArray = ["Aluguel", "Mercado", "Energia", "Água", "Outros"];
+       const yArray = [1200, 950, 150, 120, 500];
+       const layout = {title:""};
+
+    const data = [{
+        labels: xArray,
+        values: yArray,
+        type: "pie"
+    }];
+
+    Plotly.newPlot("pie-chart-container", data, layout);
+</script>
 
 </body>
 </html>

@@ -1,61 +1,66 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="css/style2.css">
+    <title>PoupaMais - Dashboard</title>
+    <link rel="stylesheet" href="css/principal.css"> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
+
     <header class="header">
-        <div class="logo"> PoupaMais</div>
-            <nav class="navbar">
+        <div class="logo">PoupaMais</div>
+        <nav class="navbar">
             <ul>
-                <li><a href="#" class="active">Dashboard</a></li>
-                <li><a href="#">Salários</a></li>
-                <li><a href="#">Configurações</a></li>
+                <li><a href="#" class="active"><i class="fas fa-tachometer-alt"></i> Dashboard</a></li>
+                <li><a href="#"><i class="fas fa-chart-bar"></i> Relatórios</a></li> 
+                <li><a href="#"><i class="fas fa-cog"></i> Configurações</a></li>
             </ul>
         </nav>
-        <div class="perfil-usuario">
-            <span>Usuario</span>
-            <img src="assets/imagemusuario.webp"  alt="Foto de Perfil">
+        <div class="user-profile">
+            <span>Usuário</span>
+            <img src="assets/imagemusuario.webp" alt="Foto de Perfil">
         </div>
     </header>
-    
-    <main class="main">
-                <section class="first-sec">
-            <div class="sec total-sec">
-                <div class="sec-header">
+
+    <main class="dashboard-content">
+        
+        <section class="summary-cards">
+            <div class="card total-card">
+                <div class="card-header">
                     <h3>Saldo Total</h3>
-                    </div>
+                    <i class="fas far fa-wallet"></i>
+                </div>
                 <p class="value">R$ 12.450,75</p>
                 <p class="growth positive">+1.2% neste mês</p>
             </div>
 
-            <div class="sec revenue-sec">
-                <div class="sec-header">
+            <div class="card revenue-card">
+                <div class="card-header">
                     <h3>Receitas</h3>
-                    </div>
+                    <i class="fas fa-arrow-up icon-bg-green"></i>
+                </div>
                 <p class="value">R$ 8.200,00</p>
                 <p class="comparison negative">-1% em relação ao mês anterior</p>
             </div>
 
-            <div class="sec expenses-sec">
-                <div class="sec-header">
+            <div class="card expenses-card">
+                <div class="card-header">
                     <h3>Despesas</h3>
-                    </div>
+                    <i class="fas fa-arrow-down icon-bg-red"></i>
+                </div>
                 <p class="value">R$ 3.750,25</p>
                 <p class="comparison positive">-2% em relação ao mês anterior</p>
             </div>
         </section>
-        <br>
 
-            <div class="main-grid">
+        <div class="main-grid">
             
             <div class="left-column">
                 
-                <section class="financial-summary sec">
-                    <div class="sec-header">
+                <section class="financial-summary card">
+                    <div class="card-header">
                         <h2>Resumo Financeiro</h2>
                         <div class="time-filters">
                             <span class="active">Mês</span>
@@ -65,93 +70,161 @@
                     </div>
                     <div id="pie-chart-container" class="chart-container">
                         <div class="chart-placeholder">
-                            <p>Espaço reservado para o Gráfico de Pizza</p>
+                            <img  alt="Gráfico Ilustrativo">
                         </div>
                     </div>
                 </section>
-            
-
-                <section class="recent-transactions sec">
-                    <div class="sec-header">
-                        <h2>Transações Recentes</h2>
-                        <a href="#">Ver todas</a>
+                
+                <section class="recent-transactions card">
+                    <div class="card-header">
+                        <h2>Historico</h2>
+                        <a href="#">Ver todas <i class="fas fa-chevron-right"></i></a>
                     </div>
                     
                     <div class="transaction-list">
-                        
                         <div class="transaction-item">
-                            <div class="detalhes">
-                                <p class="discrição">Salário</p>
-                                <p class="categoria">Conta Corrente</p>
+                            <div class="icon-container income"><i class="fas fa-briefcase"></i></div>
+                            <div class="details">
+                                <p class="description">Salário</p>
+                                <p class="category">Conta Corrente</p>
+                                <p class="date">25 de Junho, 2023</p>
                             </div>
-                            <span class="valor valor-receita">+R$ 5.000,00</span>
+                            <span class="amount income-amount">+R$ 5.000,00</span>
                         </div>
 
                         <div class="transaction-item">
-                            <div class="detalhes">
-                                <p class="discrição">Supermercado</p>
-                                <p class="categoria">Cartão de Crédito</p>
+                            <div class="icon-container expense"><i class="fas fa-shopping-cart"></i></div>
+                            <div class="details">
+                                <p class="description">Supermercado</p>
+                                <p class="category">Cartão de Crédito</p>
+                                <p class="date">14 de Junho, 2023</p>
                             </div>
-                            <span class="valor valor-despesa">-R$ 345,75</span>
+                            <span class="amount expense-amount">-R$ 345,75</span>
                         </div>
 
                         <div class="transaction-item">
-                            <div class="detalhes">
-                                <p class="descrição">Aluguel</p>
-                                <p class="categoria">Conta Corrente</p>
+                            <div class="icon-container expense"><i class="fas fa-home"></i></div>
+                            <div class="details">
+                                <p class="description">Aluguel</p>
+                                <p class="category">Conta Corrente</p>
+                                <p class="date">10 de Junho, 2023</p>
                             </div>
-                            <span class="valor valor-despesa">-R$ 1.200,00</span>
+                            <span class="amount expense-amount">-R$ 1.200,00</span>
                         </div>
-                        
+
+                        <div class="transaction-item">
+                            <div class="icon-container income"><i class="fas fa-gift"></i></div>
+                            <div class="details">
+                                <p class="description">Presente de Aniversário</p>
+                                <p class="category">Conta Poupança</p>
+                                <p class="date">8 de Junho, 2023</p>
+                            </div>
+                            <span class="amount income-amount">+R$ 200,00</span>
+                        </div>
+
                     </div>
                 </section>
             </div>
-
+            
             <div class="right-column">
                 
-                <section class="orçamento-mensal sec">
+                <section class="quick-actions card">
+                    <h2>Ações Rápidas</h2>
+                    <div class="actions-grid">
+                        <div class="action-item action-recipe">
+                            <i class="fas fa-plus-circle"></i>
+                            <p>Receita</p>
+                        </div>
+                        <div class="action-item action-expense">
+                            <i class="fas fa-minus-circle"></i>
+                            <p>Despesa</p>
+                        </div>
+                        <div class="action-item action-goals"> 
+                            <i class="fas fa-bullseye"></i>
+                            <p>Metas</p>
+                        </div>
+                        <div class="action-item action-report">
+                            <i class="fas fa-file-alt"></i>
+                            <p>Relatório</p>
+                        </div>
+                    </div>
+                </section>
+                <section class="monthly-budget card">
                     <h2>Orçamento Mensal</h2>
 
                     <div class="budget-item">
                         <p class="category">Alimentação</p>
                         <div class="amounts">R$ 850 / R$ 1.000</div>
-                        <div class="barras-de-Progresso">
-                            <div class="progresso-bar" style="width: 85%;"></div>
+                        <div class="progress-bar-container">
+                            <div class="progress-bar" style="width: 85%; background-color: #63b3ed;"></div>
+                        </div>
+                    </div>
+                    
+                    <div class="budget-item">
+                        <p class="category">Transporte</p>
+                        <div class="amounts">R$ 420 / R$ 600</div>
+                        <div class="progress-bar-container">
+                            <div class="progress-bar" style="width: 70%; background-color: #48bb78;"></div>
                         </div>
                     </div>
                     
                     <div class="budget-item">
                         <p class="category">Lazer</p>
                         <div class="amounts">R$ 280 / R$ 500</div>
-                        <div class="barras-de-Progresso">
-                            <div class="progresso-bar" style="width: 56%;"></div>
+                        <div class="progress-bar-container">
+                            <div class="progress-bar" style="width: 56%; background-color: #f6ad55;"></div>
+                        </div>
+                    </div>
+
+                    <div class="budget-item">
+                        <p class="category">Educação</p>
+                        <div class="amounts">R$ 150 / R$ 300</div>
+                        <div class="progress-bar-container">
+                            <div class="progress-bar" style="width: 50%; background-color: #f56565;"></div>
                         </div>
                     </div>
                 </section>
                 
-                <section class="accounts sec">
+                <section class="accounts card">
                     <h2>Contas</h2>
                     
                     <div class="account-item">
                         <p class="account-name">Cartão de Crédito</p>
+                        <p class="bank-name">Banco XYZ</p>
                         <span class="balance">R$ 2.450,00</span>
                     </div>
 
                     <div class="account-item">
                         <p class="account-name">Conta Corrente</p>
+                        <p class="bank-name">Banco ABC</p>
                         <span class="balance">R$ 8.750,50</span>
+                    </div>
+
+                    <div class="account-item">
+                        <p class="account-name">Poupança</p>
+                        <p class="bank-name">Banco XYZ</p>
+                        <span class="balance">R$ 1.250,25</span>
                     </div>
                 </section>
                 
-                <section class="financial-goals sec">
+                <section class="financial-goals card">
                     <h2>Metas Financeiras</h2>
                     
                     <div class="goal-item">
                         <p class="goal-name">Viagem para Europa</p>
                         <div class="amounts">R$ 5.500 de R$ 25.000</div>
-                        <div class="barras-de-Progressor">
-                            <div class="progresso-bar" style="width: 22%;"></div>
-                            <span class="progresso-percentage">22%</span>
+                        <div class="progress-bar-container">
+                            <div class="progress-bar" style="width: 22%; background-color: #63b3ed;"></div>
+                            <span class="progress-percentage">22%</span>
+                        </div>
+                    </div>
+                    
+                    <div class="goal-item">
+                        <p class="goal-name">Reserva de Emergência</p>
+                        <div class="amounts">R$ 7.500 de R$ 10.000</div>
+                        <div class="progress-bar-container">
+                            <div class="progress-bar" style="width: 75%; background-color: #48bb78;"></div>
+                            <span class="progress-percentage">75%</span>
                         </div>
                     </div>
                 </section>
@@ -159,14 +232,11 @@
             </div>
         </div>
     </main>
-            
+
+    <footer class="footer">
+        <div class="copyright">© 2024 FinControl. Todos os direitos reservados.</div>
+    </footer>
 
 
-
-
-
-    </main>
-    
-    </header>
 </body>
 </html>

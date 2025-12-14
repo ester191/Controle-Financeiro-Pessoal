@@ -1,0 +1,11 @@
+Options -Indexes
+
+RewriteEngine On
+RewriteBase /POUPAMAIS_MVC/public/
+
+# Se o arquivo/diretório existe, use-o
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+
+# Senão, reescreva a requisição para index.php
+RewriteRule ^(.*)$ index.php?url=$1 [QSA,L]
